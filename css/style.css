@@ -1,0 +1,439 @@
+:root {
+  --main-color: #212529;
+  --main-dark-color: #222831;
+  --main-light-color: #393e46;
+  --main-gold-color: #d4a431;
+  --main-while-color: #eeeeee;
+}
+* {
+  padding: 0;
+  margin: 0;
+  /* background-color: var(--main-gold-color); */
+  /* font-family: "Work Sans", serif; */
+}
+body {
+  font-family: "Dosis", serif !important;
+  background-color: var(--main-dark-color) !important;
+}
+html::-webkit-scrollbar{
+    width: 4px;
+  }
+  html::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+    border-radius: 60px;
+
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+  }
+    @keyframes arrow {
+    from {
+        bottom: 30px;
+    }
+    to {
+        bottom: 40px;
+    }
+    }
+    .move{
+      background-color: var(--main-gold-color);
+    position: fixed;
+    bottom: 30px;
+    right: 30px  ;
+    width: 30px;
+    height: 30px;
+    animation: arrow 0.8s ease-in-out infinite;
+    z-index: 100;
+    cursor: grab;
+    }
+    .move i{
+      transition: 0.6s;
+        font-size: 12px;
+        color: var(--main-while-color) !important;
+    }
+.main {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../image/home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.main .border-bottom {
+  z-index: 2;
+  border-color: rgb(103, 103, 103) !important;
+}
+
+.social li {
+  list-style: none;
+  cursor: pointer;
+}
+.social li i {
+  font-size: 14px;
+}
+.social .fa-facebook-f:hover {
+  color: rgb(59, 134, 239) !important;
+}
+.social .fa-youtube:hover {
+  color: red !important;
+}
+.social .fa-twitter:hover {
+  color: rgb(0, 200, 255) !important;
+}
+.social .fa-github:hover {
+  color: #212529 !important;
+}
+.social .fa-linkedin:hover {
+  color: rgb(0, 119, 255) !important;
+}
+.navbar-nav .nav-item .nav-link {
+  position: relative;
+  margin-left: 10px;
+}
+.navbar-nav .nav-item .nav-link:hover {
+  color: var(--main-gold-color) !important;
+}
+.navbar-nav .nav-item .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: var(--main-gold-color);
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+.navbar-nav .nav-item:hover .nav-link::after {
+  width: 100%;
+  /* height: 4px; */
+}
+.home h1 {
+  font-size: 70px;
+}
+.home a,
+.about a {
+  transition: 0.3s;
+}
+.about a {
+  background-color: gray;
+}
+.home a:hover,
+.about a:hover {
+  background-color: var(--main-gold-color) !important;
+  color: white !important;
+}
+
+.home span {
+  margin: 0 4px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.home span:hover {
+  transform: translateY(5px);
+}
+
+.arrow {
+  position: relative;
+  animation: arrow-move 1.5s infinite;
+}
+@keyframes arrow-move {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 20px;
+  }
+}
+
+.about {
+  padding-top: 65px;
+  min-height: 50vh;
+}
+.about .number {
+  font-size: 120px;
+  color: var(--main-gold-color) !important;
+}
+.about .about-titel {
+  /* font-size: 30px; */
+  color: var(--main-gold-color) !important;
+}
+.about h1 {
+  font-family: "Work Sans", serif;
+}
+
+.product .card img {
+  height: 450px !important;
+}
+.product .card .card-text {
+  cursor: grab;
+  bottom: 60px;
+  left: 15px;
+  display: none;
+}
+.product .card .card-det {
+  cursor: grab;
+  bottom: 25px;
+  left: 15px;
+}
+.product .card .shs::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background-color: rgba(52, 52, 52, 0.406);
+  bottom: 0;
+  left: 0;
+  transition: all 0.6s ease;
+}
+.product .card:hover .shs::after {
+  width: 100%;
+}
+.product .card:hover .card-text {
+  display: block;
+}
+
+.titel {
+}
+.titel .text-titel {
+  color: var(--main-gold-color);
+}
+.titel .main-titel {
+  /* width: 40% !important; */
+  font-family: "Work Sans", serif;
+}
+.choose .card {
+  border: 0;
+  text-align: center !important;
+  /* width: 80px; */
+  background-color: transparent;
+}
+.choose .card img {
+  width: 90px;
+  margin: auto;
+  border-radius: 50%;
+  padding: 12px;
+  background-color: var(--main-light-color);
+}
+.promo .container {
+  height: 80vh;
+  background-image: url(../image/2151008666.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.promo-titel {
+  color: var(--main-gold-color) !important;
+}
+
+.main-promo {
+  /* font-size: 40px !important; */
+}
+.photo {
+}
+.photo .card {
+  /* text-align: center !important; */
+  background-color: transparent;
+  border: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+.photo .card:hover {
+  background-color: var(--main-light-color);
+  /* border: 1px solid var(--main-while-color); */
+}
+
+.photo .card img {
+  width: 100%;
+  height: 250px;
+}
+.project {
+}
+.project .card {
+  /* height: 220px ; */
+  /* overflow: hidden; */
+  background-color: transparent;
+  text-align: center;
+  transition: all 0.6s ease !important;
+}
+.project .card:hover .card-body {
+  width: 100%;
+  display: block;
+}
+.project .card .card-body {
+  background-color: #393e467e;
+  width: 0;
+  height: 100%;
+  transition: all 0.6s ease !important;
+}
+.process .img,
+.method .img {
+  /* height: 100%; */
+  background-size: cover;
+  background-position: center;
+  /* background-image: url(../image/0\\(17.jpeg)); */
+}
+.method .me {
+  letter-spacing: 6px;
+  color: var(--main-gold-color);
+}
+.process .img {
+  background-image: url(../image/0\ \(17\).jpeg);
+} 
+.method .img {
+  background-image: url(../image/2151008666.jpg);
+}
+.process .bg,
+.method .bg {
+  background-color: var(--main-light-color);
+}
+.process .bg {
+  padding-top: 90px !important;
+  padding-bottom: 90px !important;
+}
+.method .bg {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+.process a,
+.method a {
+  transition: 0.3s;
+  background-color: var(--main-gold-color);
+}
+.process a:hover,
+.method a:hover {
+  background-color: #bb902c;
+}
+
+/* /*************** */
+
+.single-item {
+  background-color: #ced0d3 !important;
+  color: #111;
+  padding: 15px;
+  margin: 50px 15px;
+}
+.img-area img {
+  height: 200px;
+  width: 200px;
+  border: 3px solid var(--main-gold-color);
+}
+.content {
+  font-size: 18px;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: var(--main-gold-color);
+}
+
+.counter .box .num {
+  color: var(--main-gold-color) !important;
+}
+.counter .box span {
+  color: var(--main-gold-color) !important;
+}
+
+.blog .card img{
+height: 300px !important;
+} 
+
+.blog .card {
+  background-color: transparent;
+}
+.blog .card h3 {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.blog .card .span {
+  font-size: 14px;
+}
+.blog .card .span i {
+  font-size: 12px;
+  color: var(--main-gold-color);
+}
+.blog .card .read {
+  transition: 0.3s;
+}
+.blog .card .read:hover,
+.blog .card h3:hover {
+  cursor: pointer;
+  color: var(--main-gold-color);
+}
+
+.footer {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../image/2151821353.jpg);
+  background-repeat: no-repeat;
+  position: relative;
+}
+.footer::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    rgba(0, 0, 0, 0.42),
+    rgba(0, 0, 0, 0.502),
+    black
+  );
+}
+
+footer {
+  position: absolute;
+  z-index: 100;
+}
+.footer .arrow{
+  color: var(--main-gold-color)!important;
+}
+.footer .one .number,
+.footer .one .call{
+  color: var(--main-gold-color) !important;
+}
+.footer .one ul li{
+  list-style: none !important;
+  transition: 0.6s;
+}
+.footer .one ul li a{
+    transition: 0.6s;
+}
+.footer .one ul li:hover a{
+  color: var(--main-gold-color) !important;
+}
+.footer .one ul li i{
+  font-size: 12px ;
+  color: var(--main-gold-color) !important;
+}
+.footer .one ul li:hover {
+  transform: translateX(15px);
+}
+.footer .one form{}
+.footer .one form .input{
+  background-color: var(--main-light-color);
+}
+.footer .one form input{
+  
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 70%;
+}
+.footer .one form span{
+  width: 30%;
+  transition: 0.6s;
+  color: var(--main-gold-color);
+}
+.footer .one form span:hover{
+  color: white;
+  cursor: pointer;
+}
